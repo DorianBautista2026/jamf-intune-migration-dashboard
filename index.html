@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Migración JAMF - Intune | MAZ Zone</title>
+  <style>
+    :root { --ink:#07111a; --panel:#102331; --soft:#183342; --yellow:#f7cc00; --paper:#f5f8fa; --muted:#a8bcc7; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:#edf4f7; background:linear-gradient(135deg,#061018 0%,#102b37 58%,#07111a 100%); font-family:Inter,Arial,sans-serif; }
+    .shell { max-width:1180px; min-height:100vh; margin:auto; padding:26px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding-bottom:25px; border-bottom:1px solid rgba(255,255,255,.17); }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; }
+    .wordmark { color:#fff; font-size:17px; font-weight:900; letter-spacing:-1.1px; line-height:1; }
+    .wordmark b { color:var(--yellow); margin-left:2px; }
+    .globe-mark { width:29px; height:29px; display:inline-block; flex:0 0 29px; border:2px solid var(--yellow); border-radius:50%; position:relative; }
+    .globe-mark::before, .globe-mark::after { content:""; position:absolute; inset:4px 10px; border-left:1px solid var(--yellow); border-right:1px solid var(--yellow); border-radius:50%; }
+    .globe-mark::after { inset:12px 3px; border:0; border-top:1px solid var(--yellow); border-bottom:1px solid var(--yellow); border-radius:50%; }
+    .brand-copy { display:grid; gap:3px; font-size:12px; letter-spacing:.04em; color:var(--muted); }
+    .brand-copy strong { color:#fff; font-size:14px; letter-spacing:0; }
+    nav { display:flex; flex-wrap:wrap; gap:8px; }
+    nav a { color:#e7f2f6; text-decoration:none; font-size:14px; padding:9px 12px; border-radius:7px; }
+    nav a:hover, nav a.active { background:var(--yellow); color:var(--ink); font-weight:800; }
+    main { padding:76px 0 42px; }
+    .eyebrow { color:var(--yellow); font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { max-width:760px; margin:13px 0 18px; font-size:clamp(38px,6vw,70px); line-height:1.01; letter-spacing:-.06em; }
+    .lead { max-width:740px; color:#c7d8df; font-size:20px; line-height:1.55; }
+    .actions { margin:33px 0 66px; display:flex; flex-wrap:wrap; gap:12px; }
+    .button { padding:13px 18px; border-radius:7px; background:var(--yellow); color:var(--ink); text-decoration:none; font-weight:900; }
+    .button.secondary { background:transparent; color:#e9f4f7; border:1px solid rgba(255,255,255,.35); }
+    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:13px; margin-bottom:50px; }
+    .stat, .card { border:1px solid rgba(255,255,255,.14); background:rgba(9,27,38,.72); border-radius:12px; }
+    .stat { padding:19px; }
+    .stat b { display:block; color:var(--yellow); font-size:31px; margin-bottom:4px; }
+    .stat span { color:#bfd0d7; font-size:13px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { padding:25px; min-height:210px; }
+    .card .number { color:var(--yellow); font-size:13px; font-weight:800; }
+    .card h2 { margin:16px 0 10px; font-size:22px; }
+    .card p { color:#bdcdd4; line-height:1.55; }
+    .card a { display:inline-block; margin-top:8px; color:var(--yellow); font-weight:800; text-decoration:none; }
+    footer { color:#8ea7b2; font-size:12px; padding:22px 0 2px; border-top:1px solid rgba(255,255,255,.14); }
+    @media (max-width:780px) { header { align-items:flex-start; flex-direction:column; } main { padding-top:48px; } .stats,.cards { grid-template-columns:1fr 1fr; } }
+    @media (max-width:510px) { .shell { padding:20px; } .stats,.cards { grid-template-columns:1fr; } .lead { font-size:17px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="index.html" aria-label="Inicio">
+        <span class="wordmark" aria-label="ONE Tech">ONE<b>TECH</b></span>
+        <span class="globe-mark" aria-label="Migración global"></span>
+        <span class="brand-copy"><strong>Digital Workplace</strong><span>Migración JAMF - Intune</span></span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a class="active" href="index.html">Inicio</a>
+        <a href="mamxl-migration-dashboard.html">Dashboard</a>
+        <a href="mamxl-migration-dashboard.html#country">Por país</a>
+      </nav>
+    </header>
+
+    <main>
+      <p class="eyebrow">MAZ Zone · Seguimiento operativo</p>
+      <h1>Migración JAMF - Intune</h1>
+      <p class="lead">Índice independiente del dashboard de Santiago. Consulta aquí el avance de los equipos MAZ Zone, su conciliación con el tracker y el detalle operativo por país.</p>
+      <div class="actions">
+        <a class="button" href="mamxl-migration-dashboard.html">Abrir dashboard</a>
+        <a class="button secondary" href="mamxl-migration-dashboard.html#country">Ver consolidado por país</a>
+      </div>
+
+      <section class="stats" aria-label="Indicadores principales">
+        <article class="stat"><b>27</b><span>Equipos MAZ Zone en inventario</span></article>
+        <article class="stat"><b>20 / 27</b><span>Equipos conciliados por serial</span></article>
+        <article class="stat"><b>96%</b><span>Inventario con estado compliant</span></article>
+        <article class="stat"><b>10</b><span>Equipos pendientes de migración</span></article>
+      </section>
+
+      <section class="cards" aria-label="Contenido del sitio">
+        <article class="card">
+          <span class="number">01</span>
+          <h2>Dashboard MAZ Zone</h2>
+          <p>Detalle de los dispositivos y usuarios con los prefijos MAMX, MACO, MAEC, MADO, MAPE y MAZL.</p>
+          <a href="mamxl-migration-dashboard.html">Ir al dashboard →</a>
+        </article>
+        <article class="card">
+          <span class="number">02</span>
+          <h2>Vista por país</h2>
+          <p>El dashboard combina la clasificación por prefijo con el país y ubicación operativa registrados en el tracker.</p>
+          <a href="mamxl-migration-dashboard.html#country">Ver países →</a>
+        </article>
+        <article class="card">
+          <span class="number">03</span>
+          <h2>Regla de prefijos</h2>
+          <p>Las dos letras posteriores a MA identifican el país; MAZL se presenta como MX, según la convención acordada.</p>
+          <a href="mamxl-migration-dashboard.html#devices">Ver equipos →</a>
+        </article>
+      </section>
+    </main>
+    <footer>Digital Workplace · MAZ Zone · Migración JAMF - Intune</footer>
+  </div>
+</body>
+</html>
